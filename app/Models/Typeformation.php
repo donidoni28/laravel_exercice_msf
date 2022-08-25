@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Typeformation extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'nom',
+    ];
 }

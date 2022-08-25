@@ -17,7 +17,10 @@ class EleveFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nom' => $this->faker->firstName,
+            'prenom' => $this->faker->lastName,
+            'age' => $this->faker->numberBetween($int1=18,$int2=50),
+            'chercheur d\'emploie' => $this->faker->boolean,
         ];
     }
 }
