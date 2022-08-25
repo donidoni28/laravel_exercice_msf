@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('batiments', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->text('description');
             $table->timestamps();
         });
     }
