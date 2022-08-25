@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Eleve;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class EleveController extends Controller
 {
@@ -14,7 +15,11 @@ class EleveController extends Controller
      */
     public function index()
     {
-        //
+        
+        $eleves=Eleve::all();
+        return view('eleves.home',[
+            'eleves'=>$eleves
+        ]);
     }
 
     /**

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Typeformation;
 use Illuminate\Http\Request;
+use App\Models\Typeformation;
+use Illuminate\Routing\Controller;
 
 class TypeformationController extends Controller
 {
@@ -14,7 +15,10 @@ class TypeformationController extends Controller
      */
     public function index()
     {
-        //
+        $types = Typeformation::all();
+        return view('types.home',[ 
+            'types'=>$types
+        ]);
     }
 
     /**

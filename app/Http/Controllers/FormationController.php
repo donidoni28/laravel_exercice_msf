@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Formation;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class FormationController extends Controller
 {
@@ -14,7 +15,10 @@ class FormationController extends Controller
      */
     public function index()
     {
-        //
+        $formas= Formation::all();
+        return view('formations.home',[
+            'formas'=>$formas
+        ]);
     }
 
     /**

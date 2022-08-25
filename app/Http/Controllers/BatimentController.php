@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Batiment;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class BatimentController extends Controller
 {
@@ -14,7 +15,10 @@ class BatimentController extends Controller
      */
     public function index()
     {
-        //
+        $bats = Batiment::all();
+        return view('batiments.home',[
+            'bats' => $bats
+        ]);
     }
 
     /**
